@@ -11,27 +11,47 @@ This repository uses a sqlite database. The data for my CV has been dumped to re
 
 ## Virtual environment
 
+```shell
 python3 -m pip3 install --user virtualenv 
 cd ~/virtualenv 
 virtualenv django_resume
 source django_resume/bin/activate
 (django_resume)$ pip install -r requirements.txt 
 (django_resume)$ python setup.py install  
+```
 
 ## Security Settings
 
 Export an environment variable as follows (in linux) before running the server:
 
+
+```shell
 export SECRET_KEY="*my secret key*"
-Start Djangoresume
+
+```
+
+## Start Djangoresume
+
 To start Djangoresume with the data in my CV run the following:
 
+
+
+```shell
 python3 manage.py loaddata resume/fixtures/data.json
+
+```
+
 To start fresh:
 
+
+```shell
 python3 manage.py flush 		#clear all data
 python3 manage.py createsuperuser 	#create a superuser
 python3 manage.py runserver 		
+
+```
+
+
 
 ## launch the server
 
