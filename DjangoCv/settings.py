@@ -58,7 +58,10 @@ ROOT_URLCONF = 'DjangoCv.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./templates'],
+        'DIRS': [
+        	os.path.join(BASE_DIR, 'templates'),
+        	os.path.join(BASE_DIR, 'resume', 'templates'),
+        	],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +131,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 #Absolute path to the directory static files should be collected to, eg: /home/amarin/Mezzanine/static/
 # Don't put anything here yourself; store your static files in subdirectories of apps/static/ and in STATICFILES_DIRS.
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 # URL that handles the media served from MEDIA_ROOT. Different than STATIC_URL. NB trailing slash. eg http://aless80.pythonanywhere.com/media/
 #MEDIA_URL = STATIC_URL + "media/"
 MEDIA_URL = "/media/"
