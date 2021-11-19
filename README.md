@@ -17,7 +17,9 @@ virtualenv django_resume
 source django_resume/bin/activate
 (django_resume)$ pip install -r requirements.txt 
 (django_resume)$ python setup.py install  
-Security Settings
+
+## Security Settings
+
 Export an environment variable as follows (in linux) before running the server:
 
 export SECRET_KEY="*my secret key*"
@@ -31,6 +33,7 @@ python3 manage.py flush 		#clear all data
 python3 manage.py createsuperuser 	#create a superuser
 python3 manage.py runserver 		
 
-##launch the server
+## launch the server
+
 !firefox http://127.0.0.1:8000/admin 	#launch your browser on localhost
 Then use the UI to manually insert data.
